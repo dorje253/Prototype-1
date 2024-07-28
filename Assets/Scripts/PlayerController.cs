@@ -11,16 +11,21 @@ public class PlayerController : MonoBehaviour
 
 
     // private variables
-    private float speed =  15.0f;
-    private float trunSpeed = 25.0f;
+    [SerializeField] private float speed =  15.0f;
+    [SerializeField] private float trunSpeed = 25.0f;
     private float horizontalInput;
     private float verticalInput;
+
+    // Awake only called for object instantiate
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
+
+    // FixedUpdate call before Update for physics and movement
+    // LateUpdate for camera 
 
     // Update is called once per frame
     void Update()
